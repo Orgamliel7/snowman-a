@@ -32,3 +32,19 @@ TEST_CASE("'wrong numbers as input") // מספרים שלא אמורים להנ�
     CHECK_THROWS(snowman(788754345));
     CHECK_THROWS(snowman(677654536));
 }
+
+
+// עכשיו נבדוק מקרים בהם איש השלג יעבוד כמו שצריך
+TEST_CASE("some working snowmans string checks")
+ {
+    CHECK(snowman(11111111)==string(" _===_\n (.,.) \n<( : )>\n ( : ) "));
+    CHECK(snowman(22222222)==string("  ---\n .....\n\\(o.o)/\n (] [) \n (\" \") "));
+    CHECK(snowman(33333333)==string("   -\n  /_\\\n (O_O) \n/(> <)\\\n (___) "));
+    CHECK(snowman(44444444)==string("  ---\n (_*_)\n (- -) \n (   ) \n (   ) "));
+    CHECK(snowman(11114411)==string(" _===_\n (.,.) \n ( : ) \n ( : ) ")); // איש שלג קלאסי 
+    CHECK(snowman(12344434)==string(" _===_\n (O.-) \n (> <) \n (   ) "));
+    CHECK(snowman(12341234)==string(" _===_\n (O.-)/\n<(> <) \n (   ) ")); 
+    CHECK(snowman(33232124)==string(" _\n /_\ \n \(o_O) \n (] [)> \n (   ) ")); // הדוגמא השניה מקובץ הדמו
+
+   
+}
