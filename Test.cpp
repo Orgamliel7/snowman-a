@@ -43,6 +43,21 @@ TEST_CASE("some working snowmans string checks")
     
 }
 // בדיקת אי שיוויון בנוסף
+TEST_CASE("some working snowmans string checks - but with slightly wrong output")
+ {
+    CHECK(snowman(11111111)!=string(" _===_\n (.,.) \n<( : )>\n ( : ) ,"));
+    CHECK(snowman(22222222)!=string("  ---\n .....\n\\(o.o)/\n (] [) \n (\" \") ,"));
+    CHECK(snowman(33333333)!=string("   -\n  /_\\\n (O_O) \n/(> <)\\\n (___) ,"));
+    CHECK(snowman(44444444)!=string("  ---\n (_*_)\n (- -) \n (   ) \n (   ) ,"));
+    CHECK(snowman(11114411)!=string(" _===_\n (.,.) \n ( : ) \n ( : ) ,")); // איש שלג קלאסי 
+    CHECK(snowman(12344434)!=string(" _===_\n (O.-) \n (> <) \n (   ) ,"));
+    CHECK(snowman(12341234)!=string(" _===_\n (O.-)/\n<(> <) \n (   ) ,")); 
+    CHECK(snowman(11112111)!=string(" _===_\n\\(.,.) \n ( : )>\n ( : ) ,"));
+    CHECK(snowman(11113111)!=string(" _===_\n (.,.) \n/( : )>\n ( : ) ,"));
+    CHECK(snowman(11114111)!=string(" _===_\n (.,.) \n ( : )>\n ( : ) ,"));
+    CHECK(snowman(11111211)!=string(" _===_\n (.,.)/\n<( : ) \n ( : ),"));
+    
+}
 
 TEST_CASE(" wrong numbers as input") // מספרים שלא אמורים להניב דבר כי הם לא חלק מתכנית ההדפסה
 {
